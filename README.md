@@ -36,7 +36,6 @@ __So We Will Perform The Following Steps__
 * Adj Close: Adjusted closing price of the stock
 * Volume: Number of shares traded
 * Company: Name of the company
-* Data Preprocessing
 # Methodology 
 * ## Loading the dataset
   Here is a sample of the original dataset:
