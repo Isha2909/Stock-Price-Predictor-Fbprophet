@@ -65,14 +65,18 @@ __So We Will Perform The Following Steps__
 * ## Seaonality determination using ACF plots
    - We do -> Visual Inspection of ACF Plots:
       * Look for significant spikes at regular intervals.
-      * For daily data with yearly patterns, significant spikes at or around 365 lags indicate yearly seasonality.
+      * For daily data with yearly patterns, significant spikes at or around lags at regular interval indicate yearly seasonality.
   ![image](https://github.com/Isha2909/Stock-Price-Predictor-LSTM-FBProphet-Sarimax/assets/162286426/79dbc1dc-59a1-4a36-a492-025610f44e85)
   ![image](https://github.com/Isha2909/Stock-Price-Predictor-LSTM-FBProphet-Sarimax/assets/162286426/8c78661f-953f-4f04-a237-2ba9ecbcf2a2)
   ![image](https://github.com/Isha2909/Stock-Price-Predictor-LSTM-FBProphet-Sarimax/assets/162286426/9d61218f-156e-430e-af0b-353b81eac84f)
   ![image](https://github.com/Isha2909/Stock-Price-Predictor-LSTM-FBProphet-Sarimax/assets/162286426/bb424e4f-f50c-4c24-aa9e-d17979f49d6b)
   ![image](https://github.com/Isha2909/Stock-Price-Predictor-LSTM-FBProphet-Sarimax/assets/162286426/23ee69e7-2632-49c5-8b1d-4087f99e9d9a)
   ![image](https://github.com/Isha2909/Stock-Price-Predictor-LSTM-FBProphet-Sarimax/assets/162286426/738600cc-f264-4e4f-86be-d94e38e22a38)
-
+### As no clear seasonality is visible from the acf plots
+- So we Fit SARIMA models with seasonal periods of 7,30, and 91 days for each company to capture potential seasonal patterns.
+- where 7 for weekly seasonality , 30 for monthly and 91 for quaterly seasonality
+- Compare the models' performance using metric such as RMSE to determine the best-fitting seasonal period for each company's data.
+- 
 
 * ## Time Series Decomposition
   - Breaking down time series into its fundamental components :
@@ -106,13 +110,9 @@ __So We Will Perform The Following Steps__
   
 
 * ### Conclusion from above visualisation
-  - **Trend Analysis for every comapny**
-     * Comapny0 - From 2033 to 2035 -->SIDEWAYS TREND ,FRom 2035 end to 2037 --> UPTREND then again  till 2038 its a SIDEWAYS trend
-     * Comapny1 - From  2033 to 2035(March or April ) --> DOWNTREND  then till 2036(july)--> UPTREND then till 2038 --> SIDEWAYS
-     * Comapny2 - From  2033 to 2035(Jan) --> DOWNTREND then till 2038 its Sideways
-     * Comapny3 - From  2033 to 2035(March or April ) --> DOWNTREND then till 2037(July)--> SIDEWAYS then till 2038--> UPTREND
-     * Comapny4 - From  2033 to 2035(March or April ) --> DOWNTREND then till 2038--> UPTREND
-     * Comapny5 - From  2033 to 2035(March or April ) --> DOWNTREND then till 2038--> UPTREND
+  - **Best Fit Trendline  Analysis for every comapny**
+  - ![image](https://github.com/Isha2909/Stock-Price-Predictor-LSTM-FBProphet-Sarimax/assets/162286426/083d2abe-f683-4c72-b4f6-3684a018a503)
+  - 
 * How to Determine Whether a TimeSeries is Additive or Multiplicative ?
      - Requirements for additivity and multiplicity
      * The additive model assumes constant seasonal fluctuations, with the seasonal component oscillating around a constant mean (zero).
