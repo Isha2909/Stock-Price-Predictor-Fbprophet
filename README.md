@@ -76,7 +76,7 @@ __So We Will Perform The Following Steps__
 - So we Fit SARIMA models with seasonal periods of 7,30, and 91 days for each company to capture potential seasonal patterns.
 - where 7 for weekly seasonality , 30 for monthly and 91 for quaterly seasonality
 - Compare the models' performance using metric such as RMSE to determine the best-fitting seasonal period for each company's data.
-- 
+
 
 * ## Time Series Decomposition
   - Breaking down time series into its fundamental components :
@@ -112,13 +112,30 @@ __So We Will Perform The Following Steps__
 * ### Conclusion from above visualisation
   - **Best Fit Trendline  Analysis for every comapny**
   - ![image](https://github.com/Isha2909/Stock-Price-Predictor-LSTM-FBProphet-Sarimax/assets/162286426/083d2abe-f683-4c72-b4f6-3684a018a503)
-  - 
+    
 * How to Determine Whether a TimeSeries is Additive or Multiplicative ?
      - Requirements for additivity and multiplicity
      * The additive model assumes constant seasonal fluctuations, with the seasonal component oscillating around a constant mean (zero).
      * The multiplicative model assumes that seasonal fluctuations vary proportionally with the level of the time series, with the seasonal component oscillating around a mean value (one).
        
-       **Given the stability and consistency observed in the multiplicative decomposition, particularly in the seasonal and residual components, it suggests that the time series is better represented by a multiplicative decomposition.** 
+       **Given the stability and consistency observed in the multiplicative decomposition, particularly in the seasonal and residual components, it suggests that the time series is better represented by a multiplicative decomposition.**
+ * Now after the entire analysis we have to decide the algorithms for prediction
+    - Long Short Term Memory(Lstms) networks
+    - Fbprophet
+* Why these models only ?
+  
+   *For Lstms*
+  
+  ![image](https://github.com/user-attachments/assets/98aef192-878f-4eb2-8da3-c038d74813ee)
+  
+   *For fbprophet*
+  
+  ![image](https://github.com/user-attachments/assets/ad862cf8-877b-4555-96f0-5c3737657305)
+  ![image](https://github.com/user-attachments/assets/81236906-04e6-4ebe-a589-9e671b8506c9)
+  
+
+
+
 
   
 
