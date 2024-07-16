@@ -73,10 +73,9 @@ __So We Will Perform The Following Steps__
   ![image](https://github.com/Isha2909/Stock-Price-Predictor-LSTM-FBProphet-Sarimax/assets/162286426/23ee69e7-2632-49c5-8b1d-4087f99e9d9a)
   ![image](https://github.com/Isha2909/Stock-Price-Predictor-LSTM-FBProphet-Sarimax/assets/162286426/738600cc-f264-4e4f-86be-d94e38e22a38)
 ### As no clear seasonality is visible from the acf plots
-- So we Fit SARIMA models with seasonal periods of 7,30, and 91 days for each company to capture potential seasonal patterns.
-- where 7 for weekly seasonality , 30 for monthly and 91 for quaterly seasonality
+- So we Fit SARIMA models with seasonal periods of 5,20,63 and 252 days for each company to capture potential seasonal patterns.
+- where 5  for weekly seasonality , 20 for monthly, 63 for quaterly seasonality and 252 for yearly seaonality .
 - Compare the models' performance using metric such as RMSE to determine the best-fitting seasonal period for each company's data.
-
 
 * ## Time Series Decomposition
   - Breaking down time series into its fundamental components :
