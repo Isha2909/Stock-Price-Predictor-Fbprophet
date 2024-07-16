@@ -108,8 +108,8 @@ __So We Will Perform The Following Steps__
   ![image](https://github.com/Isha2909/Stock-Price-Predictor-LSTM-FBProphet-Sarimax/assets/162286426/b01da8a9-e07f-4324-ad82-0fd4ed705a3c)
   
 
-* ### Conclusion from above visualisation
-  - **Best Fit Trendline  Analysis for every comapny**
+
+- ####**Best Fit Trendline  Analysis for every comapny**
   - ![image](https://github.com/Isha2909/Stock-Price-Predictor-LSTM-FBProphet-Sarimax/assets/162286426/083d2abe-f683-4c72-b4f6-3684a018a503)
     
 * How to Determine Whether a TimeSeries is Additive or Multiplicative ?
