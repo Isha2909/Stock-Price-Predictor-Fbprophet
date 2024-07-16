@@ -121,18 +121,80 @@ __So We Will Perform The Following Steps__
        **Given the stability and consistency observed in the multiplicative decomposition, particularly in the seasonal and residual components, it suggests that the time series is better represented by a multiplicative decomposition.**
  * Now after the entire analysis we have to decide the algorithms for prediction
     - Long Short Term Memory(Lstms) networks
+      ## What are LSTMs?
+       Long Short-Term Memory networks (LSTMs) are a type of recurrent neural network (RNN) specifically designed to address the limitations of traditional RNNs, particularly when dealing with long sequences of data.
     - Fbprophet
+      ## What is fbprophet?
+         **fbprophet** (now referred to simply as **Prophet**) is an open-source forecasting tool developed by Facebook designed for forecasting time series data. It provides an intuitive interface for users to easily generate reliable 
+           forecasts without requiring extensive knowledge of statistics or machine learning.
+      
 * Why these models only ?
-  
+
    *For Lstms*
-  
-  ![image](https://github.com/user-attachments/assets/98aef192-878f-4eb2-8da3-c038d74813ee)
-  
+   1. Handling Non-linear Relationships : polynomial trends can be captured by polynomial regression, stock prices are often influenced by a variety of non-linear factors, making LSTMs more suitable.
+   2. Capturing Long-Term Dependencies : designed to remember information for long periods, which is crucial for time series data
+   3. Resilience to Noise : 
+   4. Dynamic Patterns
+      
    *For fbprophet*
+  1. Seasonality Handling
+  2. Trend Analysis
+  3. Holiday Effects
+  4. Handling Missing Data and Outliers:
+  5. Handles  Both Additive and Multiplicative timeseries data
+  6. Ease of Use
+     
+ * # Implementation of Lstms :
+   - Preprocessing:
+      - Normalized the data using MinMaxScaler
+      - Created sequences for the LSTM model.
+   - Creating Sequences:
+      - Defined a function to create sequences from the scaled data
+        
+        ![image](https://github.com/user-attachments/assets/82877deb-9fe9-40ce-a50b-5e970884b171)
+
+   - Did Hyperparameter Tuning to get best hyperparameters
+   - Building the LSTM Model
+     ![image](https://github.com/user-attachments/assets/b36251c1-932f-475e-a8a6-4492db8db5c1)
+   -  Training the Model
+     
+     ![image](https://github.com/user-attachments/assets/94279fae-d242-432f-b817-0b011dc98860)
+   -  Making Predictions
+   
+     ![image](https://github.com/user-attachments/assets/148256a2-d6fb-42ce-99fe-493644b7f5cd)
+   
+* ## Implementation  of Fbprophet :
+   - Data Preprocessing :
+      -  Ensure the 'ds' column is in datetime format.
+     
+         ![image](https://github.com/user-attachments/assets/f3710c28-afba-4994-984a-27c8c08c16ea)
+
+     - Hyperparamter tuning for fbprophet :
+       
+         ![image](https://github.com/user-attachments/assets/60d3d19f-65b2-4efb-969d-04a3ffdc5b52)
+    -  Initialize the Model and Setting all the hyperparameters :
+         ![image](https://github.com/user-attachments/assets/3d40c1ac-6082-4f4e-82d4-7536bb1f7723)
+
+    -  Fitting the model and doing prediction :
+
+        ![image](https://github.com/user-attachments/assets/e133a224-ada9-48e4-b183-cd48d6bdb405)
+
+* Result :
+    - Got the best rmse of 141.67 with fbprophet .
+
   
-  ![image](https://github.com/user-attachments/assets/ad862cf8-877b-4555-96f0-5c3737657305)
-  ![image](https://github.com/user-attachments/assets/81236906-04e6-4ebe-a589-9e671b8506c9)
+
+
+
   
+  
+  
+
+
+
+
+  
+
 
 
 
